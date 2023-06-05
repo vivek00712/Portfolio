@@ -1,9 +1,23 @@
 import React from "react";
+import Header from "../Components/Header/Header";
+import Home from "../Components/Pages/Home";
+import Blogs from "../Components/Pages/Blogs";
+import Contact from "../Components/Pages/Contact";
+import DevJokes from "../Components/Pages/DevJokes";
+import Footer from "../Components/Footer/Footer";
+import { Route, Routes } from "react-router-dom";
 
 function Container(props) {
   return (
     <div>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/blogs" element={<Blogs />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/devJokes" element={<DevJokes />} />
+      </Routes>
+      <Footer />
     </div>
   );
 }

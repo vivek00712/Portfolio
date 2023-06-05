@@ -1,9 +1,9 @@
-import Container from "./Containers/Container"
+import Container from "./Containers/Container";
 
 function App() {
   return (
     <>
-      <Container/>
+      <Container />
     </>
   );
 }
