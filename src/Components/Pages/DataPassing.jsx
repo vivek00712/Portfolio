@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import CustomButton from "../CustomControls/CustomButton";
+import CustomButton from "../Common/CustomButton";
 
 function DataPassing(props) {
   const [data, setData] = useState("Vivek");

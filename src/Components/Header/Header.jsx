@@ -47,14 +47,23 @@ function Header(props) {
                 </Link>
               </li>
 
-              <li>
+              {/* <li>
                 <Link
                   className="hover:scale-110 md:p-4 py-2 block hover:text-purple-400"
                   to="/dataPassing"
                 >
                   Data Passing
                 </Link>
-              </li>
+              </li> */}
+
+              {/* <li>
+                <Link
+                  className="hover:scale-110 md:p-4 py-2 block hover:text-purple-400"
+                  to="/useEffect"
+                >
+                  Use Effect
+                </Link>
+              </li> */}
 
               <li>
                 <label className="relative inline-flex items-center  mt-5 mr-5 cursor-pointer">
