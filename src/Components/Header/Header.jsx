@@ -1,7 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { ThemeContext } from "../../Contexts/ThemeContext";
 
 function Header(props) {
+  const { theme, toggleTheme } = useContext(ThemeContext);
+  // console.log(theme);
+
+  const onThemeChange = () => {
+    // toggleTheme(!theme);
+    toggleTheme();
+  };
+
   return (
     <div>
       <header>
@@ -65,6 +74,15 @@ function Header(props) {
                 </Link>
               </li> */}
 
+              {/* <li>
+                <Link
+                  className="hover:scale-110 md:p-4 py-2 block hover:text-purple-400"
+                  to="/useRef"
+                >
+                  Use Ref
+                </Link>
+              </li> */}
+
               <li>
                 <label className="relative inline-flex items-center  mt-5 mr-5 cursor-pointer">
                   <input
@@ -72,6 +90,7 @@ function Header(props) {
                     value=""
                     className="sr-only peer"
                     defaultChecked
+                    onChange={onThemeChange}
                   />
 
                   <div className="w-11 h-6 bg-gray-200 rounded-full peer dark:bg-gray-700 peer-focus:ring-4 peer-focus:ring-purple-300 dark:peer-focus:ring-purple-800 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-purple-600"></div>
